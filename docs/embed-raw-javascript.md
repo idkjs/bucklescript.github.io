@@ -16,7 +16,8 @@ let _ = Js.log (add 1 2)
 ```
 
 ```reason
-let add = [%raw {|
+let add: (int, int) => int = [%raw
+  {|
   function(a, b) {
     console.log("hello from raw JavaScript!");
     return a + b
